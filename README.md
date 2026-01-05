@@ -1,42 +1,49 @@
 # mkg2
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Start, and more.
+A modern TypeScript monorepo built with React 19, TanStack Start, and Tailwind CSS.
 
-## Features
+## Tech Stack
 
-- **TypeScript** - For type safety and improved developer experience
-- **TanStack Start** - SSR framework with TanStack Router
-- **TailwindCSS** - Utility-first CSS for rapid UI development
-- **shadcn/ui** - Reusable UI components
-- **Turborepo** - Optimized monorepo build system
+- **Framework**: TanStack Start (SSR with TanStack Router)
+- **UI**: React 19 + Tailwind CSS v4 + shadcn/ui
+- **Data**: TanStack Query + TanStack Form
+- **Build**: Vite + Turborepo
+- **Linting**: Biome (via Ultracite)
 
 ## Getting Started
 
-First, install the dependencies:
-
 ```bash
+# Install dependencies
 bun install
-```
 
-Then, run the development server:
-
-```bash
+# Start development server
 bun run dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) in your browser to see the web application.
+Open [http://localhost:3001](http://localhost:3001) to view the app.
 
 ## Project Structure
 
 ```
 mkg2/
 ├── apps/
-│   ├── web/         # Frontend application (React + TanStack Start)
+│   └── web/              # TanStack Start application
+├── packages/
+│   ├── config/           # Shared configuration
+│   └── env/              # Environment variables
+└── turbo.json            # Turborepo configuration
 ```
 
-## Available Scripts
+## Scripts
 
-- `bun run dev`: Start all applications in development mode
-- `bun run build`: Build all applications
-- `bun run dev:web`: Start only the web application
-- `bun run check-types`: Check TypeScript types across all apps
+| Command              | Description                    |
+|---------------------|--------------------------------|
+| `bun run dev`       | Start all apps in dev mode     |
+| `bun run build`     | Build all applications         |
+| `bun run dev:web`   | Start web app only             |
+| `bun run check-types` | TypeScript type checking     |
+| `bun x ultracite fix` | Format and lint code         |
+
+## License
+
+MIT
