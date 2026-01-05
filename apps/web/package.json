@@ -7,8 +7,10 @@
     "serve": "vite preview",
     "dev": "vite dev",
     "preview": "vite preview",
-    "deploy": "vite build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "deploy": "wrangler deploy",
+    "deploy:build": "vite build && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "pages:build": "bun install && vite build"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
