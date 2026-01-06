@@ -12,13 +12,13 @@ import { Toaster } from "@/components/ui/sonner";
 import appCss from "../index.css?url";
 
 const FAVICON_ACTIVE =
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-fav/favicon.ico";
+  "https://files.merahkaryagemilang.com/logo/mkg-fav/favicon.ico";
 const FAVICON_INACTIVE =
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-fav-white/favicon.ico";
+  "https://files.merahkaryagemilang.com/logo/mkg-fav-white/favicon.ico";
 
 const SITE_URL = "https://merahkaryagemilang.com";
 const OG_IMAGE =
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-heavy-excavator-digging.webp";
+  "https://files.merahkaryagemilang.com/content/mkg-heavy-excavator-digging.webp";
 
 // SEO structured data
 const structuredData = {
@@ -56,7 +56,7 @@ const structuredData = {
       "@id": `${SITE_URL}/#organization`,
       name: "Merah Karya Gemilang",
       url: SITE_URL,
-      logo: "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png",
+      logo: "https://files.merahkaryagemilang.com/logo/mkg-logo-2.png",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+6281318000611",

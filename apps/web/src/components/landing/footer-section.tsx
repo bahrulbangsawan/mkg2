@@ -41,7 +41,7 @@ export function FooterSection() {
                     className="size-6 select-none object-contain"
                     draggable={false}
                     height={24}
-                    src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png"
+                    src="https://files.merahkaryagemilang.com/logo/mkg-logo-2.png"
                     width={24}
                   />
                 </div>

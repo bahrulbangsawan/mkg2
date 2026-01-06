@@ -11,14 +11,14 @@ const STAT_VALUE_REGEX = /^(\d+)(.*)$/;
 
 // Carousel images
 const CAROUSEL_IMAGES = [
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-1.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-2.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-3.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-4.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-5.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-6.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-7.webp",
-  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-8.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-2.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-3.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-4.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-5.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-6.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-7.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-8.webp",
 ];
 
 // Helper to parse numeric value and suffix from stat value like "500+"

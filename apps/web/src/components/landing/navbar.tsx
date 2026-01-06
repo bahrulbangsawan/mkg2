@@ -15,7 +15,7 @@ export function Navbar() {
             className="size-8 select-none object-contain"
             draggable={false}
             height={32}
-            src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png"
+            src="https://files.merahkaryagemilang.com/logo/mkg-logo-2.png"
             width={32}
           />
           <div className="flex flex-col">

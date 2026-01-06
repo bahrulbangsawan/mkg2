@@ -67,7 +67,7 @@ export function HeroSection() {
                 playsInline
               >
                 <source
-                  src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-exavator.mp4"
+                  src="https://files.merahkaryagemilang.com/content/mkg-exavator.mp4"
                   type="video/mp4"
                 />
               </video>
