@@ -81,7 +81,7 @@ export const statsContent = {
   description:
     "Di Merah Karya Gemilang, perjalanan kami dimulai lebih dari satu dekade lalu dengan misi sederhana: merevolusi industri penyewaan alat berat. Yang dimulai sebagai tim kecil profesional yang bersemangat telah berkembang menjadi pemimpin regional di Sulawesi.",
   stats: [
-    { value: "500+", label: "Unit Alat Berat" },
+    { value: "210+", label: "Unit Alat Berat" },
     { value: "200+", label: "Klien Puas" },
     { value: "15+", label: "Tahun Pengalaman" },
   ],
@@ -189,18 +189,10 @@ export const footerContent = {
       "Nikmati pengelolaan alat berat yang lancar dengan layanan kami",
     cta: "Mulai Konsultasi Gratis",
   },
-  columns: [
-    {
-      title: "Sumber Daya",
-      links: [
-        { label: "Blog", href: "#blog" },
-        { label: "Studi Kasus", href: "#studi-kasus" },
-      ],
-    },
-  ],
-  legal: [
-    { label: "Syarat & Ketentuan", href: "#syarat" },
-    { label: "Kebijakan Privasi", href: "#privasi" },
+  quickLinks: [
+    { label: "Tentang Kami", href: "#tentang" },
+    { label: "Layanan", href: "#layanan" },
+    { label: "Kontak", href: "#kontak" },
   ],
   copyright: `© ${new Date().getFullYear()} Merah Karya Gemilang. Hak Cipta Dilindungi.`,
 };

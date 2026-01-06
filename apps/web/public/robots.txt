@@ -3,8 +3,10 @@
 
 User-agent: *
 Allow: /
+Disallow: /_build/
+Disallow: /api/
 
-# AI Crawlers
+# AI Crawlers (Allowed)
 User-agent: GPTBot
 Allow: /
 
@@ -20,5 +22,18 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# Aggressive bots (rate limited)
+User-agent: CCBot
+Crawl-delay: 10
+
+User-agent: Bytespider
+Crawl-delay: 10
+
 # Sitemap
 Sitemap: https://merahkaryagemilang.com/sitemap.xml
+
+# Host
+Host: https://merahkaryagemilang.com

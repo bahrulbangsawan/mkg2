@@ -1,13 +1,16 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import CountUp from "@/components/count-up";
 import ShinyText from "@/components/shiny-text";
 import { statsContent } from "@/data/landing-content";
 
 // Regex for parsing numeric value and suffix from stat value like "500+"
 const STAT_VALUE_REGEX = /^(\d+)(.*)$/;
+
+// Minimum swipe distance to trigger slide change
+const SWIPE_THRESHOLD = 50;
 
 // Carousel images
 const CAROUSEL_IMAGES = [
@@ -35,7 +38,78 @@ function parseStatValue(value: string): { num: number; suffix: string } {
 
 export function StatsSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const isDragging = useRef(false);
 
+  const goToNext = useCallback(() => {
+    setCurrentImageIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+  }, []);
+
+  const goToPrev = useCallback(() => {
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length
+    );
+  }, []);
+
+  const handleSwipe = useCallback(() => {
+    if (touchStartX.current === null || touchEndX.current === null) {
+      return;
+    }
+
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(diff) > SWIPE_THRESHOLD) {
+      if (diff > 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  }, [goToNext, goToPrev]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    handleSwipe();
+  }, [handleSwipe]);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    isDragging.current = true;
+    touchStartX.current = e.clientX;
+  }, []);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDragging.current) {
+      return;
+    }
+    touchEndX.current = e.clientX;
+  }, []);
+
+  const handleMouseUp = useCallback(() => {
+    if (isDragging.current) {
+      handleSwipe();
+      isDragging.current = false;
+    }
+  }, [handleSwipe]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (isDragging.current) {
+      handleSwipe();
+      isDragging.current = false;
+    }
+  }, [handleSwipe]);
+
+  // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
@@ -44,19 +118,49 @@ export function StatsSection() {
     return () => clearInterval(interval);
   }, []);
 
+  // Preload adjacent carousel images for smoother transitions
+  useEffect(() => {
+    const preloadImage = (index: number) => {
+      const img = new Image();
+      img.src = CAROUSEL_IMAGES[index];
+    };
+
+    // Preload next and previous images
+    const nextIndex = (currentImageIndex + 1) % CAROUSEL_IMAGES.length;
+    const prevIndex =
+      (currentImageIndex - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length;
+
+    preloadImage(nextIndex);
+    preloadImage(prevIndex);
+  }, [currentImageIndex]);
+
   return (
     <section className="bg-background py-16 sm:py-24" id="layanan">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Image */}
           <div className="relative">
-            <div className="aspect-square overflow-hidden rounded-3xl bg-muted">
+            {/* biome-ignore lint/a11y/noStaticElementInteractions lint/a11y/noNoninteractiveElementInteractions lint/a11y/useAriaPropsSupportedByRole: carousel requires swipe interaction */}
+            <div
+              aria-label="Image carousel, swipe to navigate"
+              aria-roledescription="carousel"
+              className="aspect-square cursor-grab overflow-hidden rounded-3xl bg-muted active:cursor-grabbing"
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeave}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onTouchEnd={handleTouchEnd}
+              onTouchMove={handleTouchMove}
+              onTouchStart={handleTouchStart}
+            >
               <img
                 alt="Excavator di lokasi proyek"
-                className="size-full select-none object-cover transition-opacity duration-1000"
+                className="pointer-events-none size-full select-none object-cover transition-opacity duration-1000"
+                decoding="async"
                 draggable={false}
                 height={800}
                 key={currentImageIndex}
+                loading="lazy"
                 src={CAROUSEL_IMAGES[currentImageIndex]}
                 width={640}
               />
@@ -92,11 +196,6 @@ export function StatsSection() {
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-3 rounded-lg border border-border bg-muted p-2">
-                  <div className="flex size-12 items-center justify-center rounded bg-white">
-                    <span className="font-bold text-foreground text-xs">
-                      EXC
-                    </span>
-                  </div>
                   <div>
                     <p className="text-muted-foreground text-xs">Saat ini di</p>
                     <p className="font-semibold text-foreground text-sm leading-tight">

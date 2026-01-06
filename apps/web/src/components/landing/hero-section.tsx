@@ -1,8 +1,51 @@
+"use client";
+
 import { MapPin, Rocket } from "lucide-react";
+import { useEffect, useState } from "react";
 import ShinyText from "@/components/shiny-text";
 import { heroContent } from "@/data/landing-content";
 
+// All cities and regions in Sulawesi Selatan
+const SULAWESI_SELATAN_LOCATIONS = [
+  "Makassar",
+  "Parepare",
+  "Palopo",
+  "Bone",
+  "Gowa",
+  "Maros",
+  "Bulukumba",
+  "Bantaeng",
+  "Jeneponto",
+  "Takalar",
+  "Sinjai",
+  "Barru",
+  "Pangkep",
+  "Pinrang",
+  "Enrekang",
+  "Luwu",
+  "Luwu Utara",
+  "Luwu Timur",
+  "Tana Toraja",
+  "Toraja Utara",
+  "Wajo",
+  "Soppeng",
+  "Sidrap",
+  "Selayar",
+];
+
 export function HeroSection() {
+  const [locationIndex, setLocationIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLocationIndex(
+        (prev) => (prev + 1) % SULAWESI_SELATAN_LOCATIONS.length
+      );
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] flex-col overflow-hidden bg-background">
       {/* Background Pattern */}
@@ -65,6 +108,8 @@ export function HeroSection() {
                 loop
                 muted
                 playsInline
+                poster="https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp"
+                preload="metadata"
               >
                 <source
                   src="https://files.merahkaryagemilang.com/content/mkg-exavator.mp4"
@@ -80,10 +125,13 @@ export function HeroSection() {
                 Sulawesi Selatan
               </span>
             </div>
-            <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm">
-              <MapPin className="size-4 text-primary" />
-              <span className="font-semibold text-foreground text-sm">
-                Makassar
+            <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm transition-all duration-300">
+              <MapPin className="size-4 shrink-0 text-primary" />
+              <span
+                className="whitespace-nowrap font-semibold text-foreground text-sm"
+                key={locationIndex}
+              >
+                {SULAWESI_SELATAN_LOCATIONS[locationIndex]}
               </span>
             </div>
           </div>

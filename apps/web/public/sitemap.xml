@@ -1,22 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://merahkaryagemilang.com/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <!-- Carousel Images -->
     <image:image>
       <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp</image:loc>
-      <image:title>Excavator Merah Karya Gemilang di Proyek Konstruksi</image:title>
+      <image:title>Excavator Merah Karya Gemilang 1</image:title>
+      <image:caption>Unit excavator profesional untuk proyek konstruksi di Sulawesi</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://files.merahkaryagemilang.com/content/mkg-heavy-excavator-digging.webp</image:loc>
-      <image:title>Excavator Berat Merah Karya Gemilang</image:title>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-2.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 2</image:title>
+      <image:caption>Excavator berkualitas tinggi untuk proyek pertambangan</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-3.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 3</image:title>
+      <image:caption>Alat berat modern untuk infrastruktur</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-4.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 4</image:title>
+      <image:caption>Excavator andal untuk proyek konstruksi besar</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-5.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 5</image:title>
+      <image:caption>Unit excavator dengan operator berpengalaman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-6.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 6</image:title>
+      <image:caption>Excavator untuk proyek land clearing</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-7.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 7</image:title>
+      <image:caption>Alat berat untuk penggalian dan konstruksi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-8.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 8</image:title>
+      <image:caption>Excavator untuk proyek pembangunan jalan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-9.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 9</image:title>
+      <image:caption>Unit excavator untuk proyek perumahan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-10.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 10</image:title>
+      <image:caption>Excavator berkualitas untuk proyek komersial</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://files.merahkaryagemilang.com/content/mkg-excavator-11.webp</image:loc>
+      <image:title>Excavator Merah Karya Gemilang 11</image:title>
+      <image:caption>Armada excavator lengkap Merah Karya Gemilang</image:caption>
+    </image:image>
+    <!-- Logo -->
     <image:image>
       <image:loc>https://files.merahkaryagemilang.com/logo/mkg-logo-2.png</image:loc>
       <image:title>Logo Merah Karya Gemilang</image:title>
+      <image:caption>Logo resmi Merah Karya Gemilang - Sewa Alat Berat Terpercaya</image:caption>
     </image:image>
   </url>
   <url>

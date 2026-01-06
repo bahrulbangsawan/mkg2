@@ -11,7 +11,6 @@ export const getRouter = () => {
     defaultPreloadStaleTime: 0,
     context: {},
     defaultPendingComponent: () => <Loader />,
-    defaultNotFoundComponent: () => <div>Not Found</div>,
     Wrap: ({ children }) => <>{children}</>,
   });
   return router;

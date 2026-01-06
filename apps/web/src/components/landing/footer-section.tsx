@@ -4,96 +4,93 @@ export function FooterSection() {
   return (
     <footer className="bg-foreground" id="kontak">
       {/* Banner CTA */}
-      <div className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+      <div className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         {/* Background Pattern */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="flex flex-col items-start gap-6 sm:items-center sm:gap-8 sm:text-center">
-            <h2 className="font-semibold text-2xl text-background leading-tight sm:text-4xl lg:text-5xl">
-              {footerContent.banner.headline}
-            </h2>
-            <p className="max-w-xl text-background/80 text-base sm:text-lg">
-              {footerContent.banner.description}
-            </p>
-            <a
-              className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-background px-8 font-semibold text-foreground transition-colors hover:bg-muted"
-              href="https://wa.me/6281318000611"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {footerContent.banner.cta}
-            </a>
-          </div>
+        <div className="relative mx-auto max-w-3xl text-center">
+          <h2 className="font-semibold text-2xl text-background leading-tight sm:text-3xl lg:text-4xl">
+            {footerContent.banner.headline}
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-background/70 text-sm sm:text-base">
+            {footerContent.banner.description}
+          </p>
+          <a
+            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-background px-6 font-medium text-foreground text-sm transition-colors hover:bg-background/90"
+            href="https://wa.me/6281318000611"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {footerContent.banner.cta}
+          </a>
         </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className="border-background/10 border-t px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-            {/* Logo & Info */}
-            <div className="flex flex-col gap-4">
-              <div className="flex select-none items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-lg bg-background">
+      {/* Footer Content */}
+      <div className="border-background/10 border-t">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Company Info */}
+            <div className="sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center gap-3">
+                <div className="flex size-9 items-center justify-center rounded-lg bg-background">
                   <img
                     alt="MKG Logo"
-                    className="size-6 select-none object-contain"
+                    className="size-5 select-none object-contain"
+                    decoding="async"
                     draggable={false}
-                    height={24}
+                    height={20}
+                    loading="lazy"
                     src="https://files.merahkaryagemilang.com/logo/mkg-logo-2.png"
-                    width={24}
+                    width={20}
                   />
                 </div>
-                <div className="flex flex-col">
-                  <span className="font-semibold text-background">
-                    {companyInfo.name}
-                  </span>
-                  <span className="text-background/60 text-xs">
-                    Penyewaan Alat Berat
-                  </span>
-                </div>
+                <span className="font-semibold text-background">
+                  {companyInfo.name}
+                </span>
               </div>
-              {/* Business Address */}
-              <address className="text-background/60 text-xs not-italic leading-relaxed sm:text-sm">
-                PERUMAHAN THE MAPLE
+              <p className="mt-3 max-w-xs text-background/60 text-sm leading-relaxed">
+                Penyewaan alat berat terpercaya untuk proyek konstruksi,
+                pertambangan, dan infrastruktur di Sulawesi.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-medium text-background text-sm">
+                Menu Cepat
+              </h3>
+              <nav className="mt-3 flex flex-col gap-2">
+                {footerContent.quickLinks.map((link) => (
+                  <a
+                    className="text-background/60 text-sm transition-colors hover:text-background"
+                    href={link.href}
+                    key={link.label}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="font-medium text-background text-sm">Alamat</h3>
+              <address className="mt-3 text-background/60 text-sm not-italic leading-relaxed">
+                Perumahan The Maple
                 <br />
                 Jl. Maple Way No. 5
                 <br />
                 Kel. Tanjung Merdeka, Kec. Tamalate
                 <br />
                 Kota Makassar, Sulawesi Selatan 90224
-                <br />
-                Indonesia
               </address>
-            </div>
-
-            {/* Links */}
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              {footerContent.columns[0].links.map((link) => (
-                <a
-                  className="text-background/70 text-sm transition-colors hover:text-background"
-                  href={link.href}
-                  key={link.label}
-                >
-                  {link.label}
-                </a>
-              ))}
-              {footerContent.legal.map((link) => (
-                <a
-                  className="text-background/70 text-sm transition-colors hover:text-background"
-                  href={link.href}
-                  key={link.label}
-                >
-                  {link.label}
-                </a>
-              ))}
             </div>
           </div>
 
           {/* Copyright */}
-          <div className="mt-6 border-background/10 border-t pt-6 text-center">
-            <p className="text-background/50 text-sm">
+          <div className="mt-10 border-background/10 border-t pt-6">
+            <p className="text-center text-background/50 text-xs sm:text-sm">
               {footerContent.copyright}
             </p>
           </div>
