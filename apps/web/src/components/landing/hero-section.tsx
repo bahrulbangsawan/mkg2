@@ -38,7 +38,7 @@ export function HeroSection() {
             <div className="flex flex-row gap-3">
               <a
                 className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-4 font-semibold text-primary-foreground text-sm transition-colors hover:bg-primary/90 sm:h-14 sm:px-8 sm:text-base"
-                href="https://wa.me/+6285840066784"
+                href="https://wa.me/6281318000611"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -46,7 +46,7 @@ export function HeroSection() {
               </a>
               <a
                 className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-background px-4 font-semibold text-foreground text-sm transition-colors hover:bg-muted sm:h-14 sm:px-8 sm:text-base"
-                href="https://wa.me/+6285840066784"
+                href="https://wa.me/6281318000611"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -83,28 +83,9 @@ export function HeroSection() {
             <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm">
               <MapPin className="size-4 text-primary" />
               <span className="font-semibold text-foreground text-sm">
-                Bone
+                Makassar
               </span>
             </div>
-          </div>
-        </div>
-
-        {/* Trusted By Section */}
-        <div className="mt-8 border-border border-t pt-8 sm:mt-12 lg:mt-16">
-          <p className="mb-6 text-center font-semibold text-lg text-muted-foreground sm:mb-8 sm:text-xl">
-            {heroContent.trustedBy}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 opacity-60 sm:gap-8 lg:gap-16">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div
-                className="flex h-10 w-16 items-center justify-center rounded bg-muted sm:w-32"
-                key={i}
-              >
-                <span className="font-semibold text-muted-foreground text-xs sm:text-sm">
-                  Partner {i}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ export const companyInfo = {
 export const navLinks = [
   { label: "Tentang Kami", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
-  { label: "Armada", href: "#armada" },
   { label: "Kontak", href: "#kontak" },
 ] as const;
 
@@ -85,42 +84,6 @@ export const statsContent = {
     { value: "500+", label: "Unit Alat Berat" },
     { value: "200+", label: "Klien Puas" },
     { value: "15+", label: "Tahun Pengalaman" },
-  ],
-};
-
-export const equipmentContent = {
-  headline: "Partner Anda untuk Solusi Alat Berat",
-  description:
-    "Menyederhanakan logistik alat berat untuk meningkatkan efisiensi dan menghemat sumber daya",
-  items: [
-    {
-      id: 1,
-      title: "Excavator",
-      description:
-        "Solusi penggalian hemat biaya untuk proyek konstruksi besar dengan berbagai kapasitas bucket.",
-      image: "/images/excavator.jpg",
-    },
-    {
-      id: 2,
-      title: "Bulldozer",
-      description:
-        "Transportasi ramah lingkungan dan efisien untuk pekerjaan perataan tanah dan pembukaan lahan.",
-      image: "/images/bulldozer.jpg",
-    },
-    {
-      id: 3,
-      title: "Crane",
-      description:
-        "Pengangkatan cepat dan efisien untuk pengiriman material sensitif waktu di seluruh lokasi proyek.",
-      image: "/images/crane.jpg",
-    },
-    {
-      id: 4,
-      title: "Dump Truck",
-      description:
-        "Transportasi yang andal via truk untuk pengiriman material lokal dan jarak jauh.",
-      image: "/images/dump-truck.jpg",
-    },
   ],
 };
 
@@ -208,7 +171,7 @@ export const faqContent = {
       id: 4,
       question: "Berapa lama waktu pengiriman alat berat?",
       answer:
-        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Makassar dan sekitarnya, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area Sulawesi Selatan, Bone, dan Sulawesi lainnya, estimasi 2-5 hari kerja.",
+        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Makassar dan sekitarnya, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area Sulawesi Selatan, Makassar, dan Sulawesi lainnya, estimasi 2-5 hari kerja.",
     },
     {
       id: 5,

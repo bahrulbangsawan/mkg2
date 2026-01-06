@@ -18,7 +18,7 @@ export function FooterSection() {
             </p>
             <a
               className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-background px-8 font-semibold text-foreground transition-colors hover:bg-muted"
-              href="https://wa.me/+6285840066784"
+              href="https://wa.me/6281318000611"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -33,25 +33,39 @@ export function FooterSection() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
             {/* Logo & Info */}
-            <div className="flex select-none items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-lg bg-background">
-                <img
-                  alt="MKG Logo"
-                  className="size-6 select-none object-contain"
-                  draggable={false}
-                  height={24}
-                  src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png"
-                  width={24}
-                />
+            <div className="flex flex-col gap-4">
+              <div className="flex select-none items-center gap-3">
+                <div className="flex size-10 items-center justify-center rounded-lg bg-background">
+                  <img
+                    alt="MKG Logo"
+                    className="size-6 select-none object-contain"
+                    draggable={false}
+                    height={24}
+                    src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png"
+                    width={24}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-semibold text-background">
+                    {companyInfo.name}
+                  </span>
+                  <span className="text-background/60 text-xs">
+                    Penyewaan Alat Berat
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="font-semibold text-background">
-                  {companyInfo.name}
-                </span>
-                <span className="text-background/60 text-xs">
-                  Penyewaan Alat Berat
-                </span>
-              </div>
+              {/* Business Address */}
+              <address className="text-background/60 text-xs not-italic leading-relaxed sm:text-sm">
+                PERUMAHAN THE MAPLE
+                <br />
+                Jl. Maple Way No. 5
+                <br />
+                Kel. Tanjung Merdeka, Kec. Tamalate
+                <br />
+                Kota Makassar, Sulawesi Selatan 90224
+                <br />
+                Indonesia
+              </address>
             </div>
 
             {/* Links */}

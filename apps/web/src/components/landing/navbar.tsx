@@ -45,7 +45,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground text-sm transition-colors hover:bg-primary/90"
-            href="https://wa.me/+6285840066784"
+            href="https://wa.me/6281318000611"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -53,7 +53,7 @@ export function Navbar() {
           </a>
           <a
             className="inline-flex h-10 items-center justify-center rounded-full border border-border bg-background px-6 font-semibold text-foreground text-sm transition-colors hover:bg-muted"
-            href="https://wa.me/+6285840066784"
+            href="https://wa.me/6281318000611"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -89,7 +89,7 @@ export function Navbar() {
             <div className="mt-4 flex flex-row gap-2">
               <a
                 className="inline-flex h-10 flex-1 items-center justify-center rounded-full bg-primary px-4 font-semibold text-primary-foreground text-sm"
-                href="https://wa.me/+6285840066784"
+                href="https://wa.me/6281318000611"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -97,7 +97,7 @@ export function Navbar() {
               </a>
               <a
                 className="inline-flex h-10 flex-1 items-center justify-center rounded-full border border-border bg-background px-4 font-semibold text-foreground text-sm"
-                href="https://wa.me/+6285840066784"
+                href="https://wa.me/6281318000611"
                 rel="noopener noreferrer"
                 target="_blank"
               >

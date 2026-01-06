@@ -31,7 +31,7 @@ const structuredData = {
       description:
         "Layanan sewa alat berat profesional untuk proyek konstruksi, pertambangan, dan infrastruktur di Sulawesi.",
       url: SITE_URL,
-      telephone: "+6285840066784",
+      telephone: "+6281318000611",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Makassar",
@@ -59,7 +59,7 @@ const structuredData = {
       logo: "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png",
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+6285840066784",
+        telephone: "+6281318000611",
         contactType: "customer service",
         availableLanguage: "Indonesian",
       },

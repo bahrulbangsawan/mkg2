@@ -18,7 +18,7 @@ export function FaqSection() {
           </p>
           <a
             className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-primary px-8 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-            href="https://wa.me/+6285840066784"
+            href="https://wa.me/6281318000611"
             rel="noopener noreferrer"
             target="_blank"
           >

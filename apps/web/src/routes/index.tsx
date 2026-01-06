@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { EquipmentSection } from "@/components/landing/equipment-section";
 import { FaqSection } from "@/components/landing/faq-section";
 import { FooterSection } from "@/components/landing/footer-section";
 import { HeroSection } from "@/components/landing/hero-section";
@@ -20,7 +19,6 @@ function LandingPage() {
         <HeroSection />
         <WhyChooseUsSection />
         <StatsSection />
-        <EquipmentSection />
         <TestimonialsSection />
         <FaqSection />
       </main>
