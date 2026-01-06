@@ -91,7 +91,11 @@ export function FooterSection() {
           {/* Copyright */}
           <div className="mt-10 border-background/10 border-t pt-6">
             <p className="text-center text-background/50 text-xs sm:text-sm">
-              {footerContent.copyright}
+              ©{" "}
+              <span suppressHydrationWarning>
+                {footerContent.copyrightYear}
+              </span>{" "}
+              {footerContent.copyrightText}
             </p>
           </div>
         </div>

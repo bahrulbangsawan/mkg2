@@ -168,19 +168,23 @@ export function StatsSection() {
             </div>
 
             {/* Carousel Dots */}
-            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1">
               {CAROUSEL_IMAGES.map((image, index) => (
                 <button
                   aria-label={`Go to image ${index + 1}`}
-                  className={`transition-all duration-300 ${
-                    index === currentImageIndex
-                      ? "h-2 w-8 bg-white"
-                      : "h-2 w-2 bg-white/50 hover:bg-white/70"
-                  }`}
+                  className="flex min-h-11 min-w-11 items-center justify-center"
                   key={image}
                   onClick={() => setCurrentImageIndex(index)}
                   type="button"
-                />
+                >
+                  <span
+                    className={`block rounded-full transition-all duration-300 ${
+                      index === currentImageIndex
+                        ? "h-2 w-6 bg-white"
+                        : "size-2 bg-white/50"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
 

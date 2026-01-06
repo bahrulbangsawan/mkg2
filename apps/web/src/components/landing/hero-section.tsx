@@ -101,6 +101,7 @@ export function HeroSection() {
           {/* Hero Video */}
           <div className="relative">
             <div className="relative aspect-square overflow-hidden rounded-3xl bg-muted lg:aspect-[4/3]">
+              {/* Video is muted/decorative - no captions needed per WCAG */}
               <video
                 autoPlay
                 className="size-full select-none object-cover"

@@ -194,5 +194,6 @@ export const footerContent = {
     { label: "Layanan", href: "#layanan" },
     { label: "Kontak", href: "#kontak" },
   ],
-  copyright: `© ${new Date().getFullYear()} Merah Karya Gemilang. Hak Cipta Dilindungi.`,
+  copyrightYear: new Date().getFullYear(),
+  copyrightText: "Merah Karya Gemilang. Hak Cipta Dilindungi.",
 };
