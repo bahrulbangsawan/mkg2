@@ -19,6 +19,9 @@ const CAROUSEL_IMAGES = [
   "https://files.merahkaryagemilang.com/content/mkg-excavator-6.webp",
   "https://files.merahkaryagemilang.com/content/mkg-excavator-7.webp",
   "https://files.merahkaryagemilang.com/content/mkg-excavator-8.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-9.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-10.webp",
+  "https://files.merahkaryagemilang.com/content/mkg-excavator-11.webp",
 ];
 
 // Helper to parse numeric value and suffix from stat value like "500+"
@@ -100,6 +103,10 @@ export function StatsSection() {
                     </p>
                     <p className="text-muted-foreground text-xs">
                       Sulawesi Selatan
+                    </p>
+                    <p className="mt-1 text-muted-foreground text-xs leading-tight">
+                      Bekerja di IUP PT. RIOTA JAYA LESTARI, Woitombo, Lasusua,
+                      Kolaka Utara
                     </p>
                   </div>
                 </div>

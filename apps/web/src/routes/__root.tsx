@@ -110,6 +110,16 @@ const structuredData = {
         },
       ],
     },
+    {
+      "@type": "ImageObject",
+      "@id": `${SITE_URL}/#image`,
+      url: "https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp",
+      name: "Excavator Merah Karya Gemilang di Proyek Konstruksi",
+      description:
+        "Excavator modern dari armada Merah Karya Gemilang yang digunakan untuk proyek konstruksi, pertambangan, dan infrastruktur di Sulawesi.",
+      width: 1920,
+      height: 1080,
+    },
   ],
 };
 
