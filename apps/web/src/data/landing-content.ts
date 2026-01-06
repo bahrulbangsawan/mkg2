@@ -19,9 +19,9 @@ export const heroContent = {
   headline: "Partner Terpercaya untuk Penyewaan Alat Berat",
   subheadline:
     "Nikmati layanan penyewaan alat berat yang handal dengan dukungan tim profesional, pemantauan real-time, dan komitmen pengiriman tepat waktu untuk proyek konstruksi Anda.",
-  primaryCta: "Mulai Sekarang",
-  secondaryCta: "Pelajari Lebih Lanjut",
-  trustedBy: "Dipercaya oleh 200+ Perusahaan di Indonesia",
+  primaryCta: "Hubungi Kami",
+  secondaryCta: "Minta Penawaran",
+  trustedBy: "Dipercaya oleh 200+ Perusahaan di Sulawesi",
 };
 
 export const partnerLogos = [
@@ -80,7 +80,7 @@ export const statsContent = {
   badge: "Pertumbuhan Kami",
   headline: "Melacak Pertumbuhan Kami Melalui Pencapaian Utama",
   description:
-    "Di Merah Karya Gemilang, perjalanan kami dimulai lebih dari satu dekade lalu dengan misi sederhana: merevolusi industri penyewaan alat berat. Yang dimulai sebagai tim kecil profesional yang bersemangat telah berkembang menjadi pemimpin nasional.",
+    "Di Merah Karya Gemilang, perjalanan kami dimulai lebih dari satu dekade lalu dengan misi sederhana: merevolusi industri penyewaan alat berat. Yang dimulai sebagai tim kecil profesional yang bersemangat telah berkembang menjadi pemimpin regional di Sulawesi.",
   stats: [
     { value: "500+", label: "Unit Alat Berat" },
     { value: "200+", label: "Klien Puas" },
@@ -208,7 +208,7 @@ export const faqContent = {
       id: 4,
       question: "Berapa lama waktu pengiriman alat berat?",
       answer:
-        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Jabodetabek, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area luar kota, estimasi 2-5 hari kerja.",
+        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Makassar dan sekitarnya, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area Sulawesi Selatan, Gorontalo, dan Sulawesi lainnya, estimasi 2-5 hari kerja.",
     },
     {
       id: 5,
@@ -223,49 +223,19 @@ export const footerContent = {
   banner: {
     headline: "Mulai Proyek Anda Bersama Kami!",
     description:
-      "Nikmati pengelolaan alat berat yang lancar dengan layanan inovatif kami",
+      "Nikmati pengelolaan alat berat yang lancar dengan layanan kami",
     cta: "Mulai Konsultasi Gratis",
   },
   columns: [
-    {
-      title: "Perusahaan",
-      links: [
-        { label: "Tentang Kami", href: "#tentang" },
-        { label: "Visi & Misi", href: "#visi-misi" },
-        { label: "Tim Kami", href: "#tim" },
-        { label: "Karir", href: "#karir" },
-      ],
-    },
-    {
-      title: "Layanan",
-      links: [
-        { label: "Excavator", href: "#excavator" },
-        { label: "Bulldozer", href: "#bulldozer" },
-        { label: "Crane", href: "#crane" },
-        { label: "Dump Truck", href: "#dump-truck" },
-      ],
-    },
     {
       title: "Sumber Daya",
       links: [
         { label: "Blog", href: "#blog" },
         { label: "Studi Kasus", href: "#studi-kasus" },
-        { label: "Panduan", href: "#panduan" },
-        { label: "FAQ", href: "#faq" },
-      ],
-    },
-    {
-      title: "Sosial Media",
-      links: [
-        { label: "Facebook", href: "#facebook" },
-        { label: "Instagram", href: "#instagram" },
-        { label: "WhatsApp", href: "#whatsapp" },
-        { label: "YouTube", href: "#youtube" },
       ],
     },
   ],
   legal: [
-    { label: "FAQ", href: "#faq" },
     { label: "Syarat & Ketentuan", href: "#syarat" },
     { label: "Kebijakan Privasi", href: "#privasi" },
   ],

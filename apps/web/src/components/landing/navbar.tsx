@@ -9,15 +9,23 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-border/40 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a className="flex items-center gap-2" href="/">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
-            <span className="font-bold text-primary-foreground text-sm">
-              MK
+        <a className="flex select-none items-center gap-2" href="/">
+          <img
+            alt="MKG Logo"
+            className="size-8 select-none object-contain"
+            draggable={false}
+            height={32}
+            src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/logo/mkg-logo-2.png"
+            width={32}
+          />
+          <div className="flex flex-col">
+            <span className="font-semibold text-foreground text-sm leading-tight sm:text-base">
+              {companyInfo.name}
+            </span>
+            <span className="text-[10px] text-muted-foreground sm:text-xs">
+              Penyewaan Alat Berat
             </span>
           </div>
-          <span className="hidden font-semibold text-foreground sm:inline-block">
-            {companyInfo.name}
-          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -37,13 +45,17 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground text-sm transition-colors hover:bg-primary/90"
-            href="#kontak"
+            href="https://wa.me/+6285840066784"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Hubungi Kami
           </a>
           <a
             className="inline-flex h-10 items-center justify-center rounded-full border border-border bg-background px-6 font-semibold text-foreground text-sm transition-colors hover:bg-muted"
-            href="#penawaran"
+            href="https://wa.me/+6285840066784"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Minta Penawaran
           </a>
@@ -74,16 +86,20 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <div className="mt-4 flex flex-col gap-2">
+            <div className="mt-4 flex flex-row gap-2">
               <a
-                className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-6 font-semibold text-primary-foreground text-sm"
-                href="#kontak"
+                className="inline-flex h-10 flex-1 items-center justify-center rounded-full bg-primary px-4 font-semibold text-primary-foreground text-sm"
+                href="https://wa.me/+6285840066784"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Hubungi Kami
               </a>
               <a
-                className="inline-flex h-10 items-center justify-center rounded-full border border-border bg-background px-6 font-semibold text-foreground text-sm"
-                href="#penawaran"
+                className="inline-flex h-10 flex-1 items-center justify-center rounded-full border border-border bg-background px-4 font-semibold text-foreground text-sm"
+                href="https://wa.me/+6285840066784"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Minta Penawaran
               </a>
