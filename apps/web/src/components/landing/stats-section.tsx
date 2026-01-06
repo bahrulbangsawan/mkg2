@@ -98,15 +98,10 @@ export function StatsSection() {
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground text-sm">
-                      MKG-EXC-001
-                    </p>
-                    <p className="text-muted-foreground text-xs">
-                      Sulawesi Selatan
-                    </p>
-                    <p className="mt-1 text-muted-foreground text-xs leading-tight">
-                      Bekerja di IUP PT. RIOTA JAYA LESTARI, Woitombo, Lasusua,
-                      Kolaka Utara
+                    <p className="text-muted-foreground text-xs">Saat ini di</p>
+                    <p className="font-semibold text-foreground text-sm leading-tight">
+                      IUP PT. RIOTA JAYA LESTARI, Woitombo, Lasusua, Kolaka
+                      Utara
                     </p>
                   </div>
                 </div>
