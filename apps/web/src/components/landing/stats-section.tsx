@@ -1,10 +1,25 @@
+"use client";
+
 import { TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
 import CountUp from "@/components/count-up";
 import ShinyText from "@/components/shiny-text";
 import { statsContent } from "@/data/landing-content";
 
 // Regex for parsing numeric value and suffix from stat value like "500+"
 const STAT_VALUE_REGEX = /^(\d+)(.*)$/;
+
+// Carousel images
+const CAROUSEL_IMAGES = [
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-1.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-2.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-3.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-4.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-5.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-6.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-7.webp",
+  "https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-excavator-8.webp",
+];
 
 // Helper to parse numeric value and suffix from stat value like "500+"
 function parseStatValue(value: string): { num: number; suffix: string } {
@@ -16,21 +31,49 @@ function parseStatValue(value: string): { num: number; suffix: string } {
 }
 
 export function StatsSection() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % CAROUSEL_IMAGES.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="bg-background py-16 sm:py-24" id="layanan">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-muted">
+            <div className="aspect-square overflow-hidden rounded-3xl bg-muted">
               <img
                 alt="Excavator di lokasi proyek"
-                className="size-full select-none object-cover"
+                className="size-full select-none object-cover transition-opacity duration-1000"
                 draggable={false}
                 height={800}
-                src="https://pub-17f88d70d25846449da0074c5635f63a.r2.dev/content/mkg-heavy-excavator-digging.webp"
+                key={currentImageIndex}
+                src={CAROUSEL_IMAGES[currentImageIndex]}
                 width={640}
               />
+            </div>
+
+            {/* Carousel Dots */}
+            <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+              {CAROUSEL_IMAGES.map((image, index) => (
+                <button
+                  aria-label={`Go to image ${index + 1}`}
+                  className={`transition-all duration-300 ${
+                    index === currentImageIndex
+                      ? "h-2 w-8 bg-white"
+                      : "h-2 w-2 bg-white/50 hover:bg-white/70"
+                  }`}
+                  key={image}
+                  onClick={() => setCurrentImageIndex(index)}
+                  type="button"
+                />
+              ))}
             </div>
 
             {/* Floating Card */}
