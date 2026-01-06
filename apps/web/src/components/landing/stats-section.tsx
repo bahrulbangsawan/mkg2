@@ -156,11 +156,12 @@ export function StatsSection() {
               <img
                 alt="Excavator di lokasi proyek"
                 className="pointer-events-none size-full select-none object-cover transition-opacity duration-1000"
-                decoding="async"
+                decoding={currentImageIndex === 0 ? "sync" : "async"}
                 draggable={false}
+                fetchPriority={currentImageIndex === 0 ? "high" : "auto"}
                 height={800}
                 key={currentImageIndex}
-                loading="lazy"
+                loading={currentImageIndex === 0 ? "eager" : "lazy"}
                 src={CAROUSEL_IMAGES[currentImageIndex]}
                 width={640}
               />

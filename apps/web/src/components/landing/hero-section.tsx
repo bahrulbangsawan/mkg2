@@ -109,7 +109,7 @@ export function HeroSection() {
                 muted
                 playsInline
                 poster="https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp"
-                preload="metadata"
+                preload="auto"
               >
                 <source
                   src="https://files.merahkaryagemilang.com/content/mkg-exavator.mp4"

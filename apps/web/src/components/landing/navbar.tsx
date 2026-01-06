@@ -13,7 +13,9 @@ export function Navbar() {
           <img
             alt="MKG Logo"
             className="size-8 select-none object-contain"
+            decoding="sync"
             draggable={false}
+            fetchPriority="high"
             height={32}
             src="https://files.merahkaryagemilang.com/logo/mkg-logo-2.png"
             width={32}

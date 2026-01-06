@@ -287,6 +287,26 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
       },
 
       // ============================================
+      // PERFORMANCE: PRELOAD CRITICAL ASSETS
+      // ============================================
+      {
+        rel: "preload",
+        href: "https://files.merahkaryagemilang.com/logo/mkg-logo-2.png",
+        as: "image",
+      },
+      {
+        rel: "preload",
+        href: "https://files.merahkaryagemilang.com/content/mkg-excavator-1.webp",
+        as: "image",
+      },
+      {
+        rel: "preload",
+        href: "https://files.merahkaryagemilang.com/content/mkg-exavator.mp4",
+        as: "video",
+        type: "video/mp4",
+      },
+
+      // ============================================
       // FAVICON FOR SEARCH RESULTS & BROWSERS
       // ============================================
       {
