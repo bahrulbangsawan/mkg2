@@ -56,7 +56,7 @@ export function StatsSection() {
                       MKG-EXC-001
                     </p>
                     <p className="text-muted-foreground text-xs">
-                      Makassar → Gorontalo
+                      Makassar → Bone
                     </p>
                   </div>
                 </div>

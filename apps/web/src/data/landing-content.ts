@@ -208,7 +208,7 @@ export const faqContent = {
       id: 4,
       question: "Berapa lama waktu pengiriman alat berat?",
       answer:
-        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Makassar dan sekitarnya, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area Sulawesi Selatan, Gorontalo, dan Sulawesi lainnya, estimasi 2-5 hari kerja.",
+        "Waktu pengiriman tergantung lokasi proyek Anda. Untuk area Makassar dan sekitarnya, pengiriman dapat dilakukan dalam 24-48 jam. Untuk area Sulawesi Selatan, Bone, dan Sulawesi lainnya, estimasi 2-5 hari kerja.",
     },
     {
       id: 5,

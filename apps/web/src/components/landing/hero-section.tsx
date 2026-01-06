@@ -83,7 +83,7 @@ export function HeroSection() {
             <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm">
               <MapPin className="size-4 text-primary" />
               <span className="font-semibold text-foreground text-sm">
-                Gorontalo
+                Bone
               </span>
             </div>
           </div>
